@@ -26,4 +26,12 @@
         </menu>
     </item>
 
+    <item android:title="User">
+        <menu>
+            <item
+                android:id="@+id/login"
+                android:title="Login"
+                android:icon="@drawable/ic_vpn_key_black_24dp"/>
+        </menu>
+    </item>
 </menu>

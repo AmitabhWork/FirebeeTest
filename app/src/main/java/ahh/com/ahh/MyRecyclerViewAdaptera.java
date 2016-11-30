@@ -7,7 +7,6 @@ import android.view.View;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,9 +32,9 @@ import java.util.ArrayList;
 
         public DataObjectHolder(View itemView) {
             super(itemView);
-            label = (TextView) itemView.findViewById(R.id.textView);
-            dateTime = (TextView) itemView.findViewById(R.id.textView2);
-            imageView=(ImageView)itemView.findViewById(R.id.bg_image);
+            label = (TextView) itemView.findViewById(R.id.memberName);
+            dateTime = (TextView) itemView.findViewById(R.id.memberDescript);
+            imageView=(ImageView)itemView.findViewById(R.id.member_image);
             Log.i(LOG_TAG, "Adding Listener");
             itemView.setOnClickListener(this);
         }
@@ -67,10 +66,11 @@ import java.util.ArrayList;
 
     @Override
     public void onBindViewHolder(DataObjectHolder holder, int position) {
+        mDataset.get(position).getMbgimage();
 //        holder.label.setText(mDataset.get(position).getmText1());
 //        holder.dateTime.setText(mDataset.get(position).getmText2());
-        holder.imageView.setImageResource(mDataset.get(position).getMbgimage());
-//        Picasso.with(mContext).load(mDataset.get(position).getMbgimage()).transform(new CropSquareTransformation()).into(holder.imageView);
+//        holder.imageView.setImageResource();
+        Picasso.with(mContext).load(mDataset.get(position).getMbgimage()).transform(new CropSquareTransformation()).into(holder.imageView);
     }
 
     public void addItem(DataObject dataObj, int index) {

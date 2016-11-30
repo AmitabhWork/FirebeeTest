@@ -6,9 +6,9 @@ package ahh.com.ahh;
 public class DataObject {
     private String mText1;
     private String mText2;
-    private int mbgimage;
+    private String mbgimage;
 
-    DataObject (String text1, String text2,int bgimage){
+    DataObject (String text1, String text2,String bgimage){
         mText1 = text1;
         mText2 = text2;
         mbgimage=bgimage;
@@ -29,6 +29,6 @@ public class DataObject {
     public void setmText2(String mText2) {
         this.mText2 = mText2;
     }
-    public int getMbgimage(){return  mbgimage;}
-    public void setMbgimage(int mbgimage){this.mbgimage=mbgimage;}
+    public String getMbgimage(){return  mbgimage;}
+    public void setMbgimage(String mbgimage){this.mbgimage=mbgimage;}
 }

@@ -21,6 +21,10 @@
         <activity
             android:name=".Activity_CoreTeam"
             android:label="@string/title_activity__core_team"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserAuth"
+            android:label="@string/title_activity_user_auth"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
