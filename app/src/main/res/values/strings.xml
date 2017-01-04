@@ -9,5 +9,15 @@
     <string name="action_about">About</string>
     <string name="title_activity__core_team">Activity_CoreTeam</string>
     <string name="title_activity_user_auth">UserAuth</string>
+    <string name="title_activity_admin">Admin</string>
+    <string name="title_activity_add_member">AddMemberActivity</string>
+    <string name="sp_member_imgurl">mImgurl</string>
+    <string name="sp_member_name">mName</string>
+    <string name="sp_member_email">mEmail</string>
+    <string name="sp_member_data">mData</string>
+    <string name="title_activity__add_banner">Activity_AddBanner</string>
+    <string name="title_activity__add_news">Activity_AddNews</string>
+    <string name="title_activity__sub_gallery">Activity_SubGallery</string>
+    <string name="title_activity__add_gallary">Activity_AddGallary</string>
 
 </resources>

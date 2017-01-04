@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="ahh.com.ahh.Activity_CoreTeam"
+    tools:context="ahh.com.app.Activity_CoreTeam"
     tools:showIn="@layout/activity__core_team">
 
     <TextView
@@ -29,7 +29,6 @@
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Some text about our hardworking team"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="normal"
@@ -47,4 +46,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/com_facebook_button_send_icon_blue"
+        android:layout_below="@+id/pageTitle"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/testimg" />
 </RelativeLayout>

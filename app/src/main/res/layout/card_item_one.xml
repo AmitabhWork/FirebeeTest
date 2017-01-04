@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_gravity="center"
+        android:layout_marginTop="24dp"
         android:elevation="6dp"
-        android:layout_marginTop="6dp"
         card_view:cardCornerRadius="6dp">
 
         <RelativeLayout
@@ -22,29 +22,22 @@
                 android:id="@+id/member_image"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:scaleType="centerCrop"
+
                 />
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="95dp"
-                android:layout_marginTop="155dp"
-                android:background="#F0A830" />
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                android:layout_alignLeft="@+id/memberName"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignStart="@+id/memberName"
-                android:layout_below="@+id/memberName"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="10dp"
-                android:alpha="0.4"
-                android:background="#000000" />
+            <!--<View-->
+                <!--android:id="@+id/line"-->
+                <!--android:layout_width="10dp"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_alignLeft="@+id/memberName"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignStart="@+id/memberName"-->
+                <!--android:layout_below="@+id/memberName"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:alpha="0.4"-->
+                <!--android:background="#000000" />-->
 
             <!--<com.pkmmte.view.CircularImageView-->
             <!--android:id="@+id/avatar"-->
@@ -59,38 +52,48 @@
             <!--android:scaleType="centerCrop"-->
             <!--android:src="@drawable/image_1"-->
             <!--/>-->
-
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F0A830"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
             <TextView
                 android:id="@+id/memberName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/member_image"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
-                android:text="Yasir Ameen"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffff"
+                android:background="#F0A830"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:textSize="18sp" />
+
+
             <!--android:layout_toEndOf="@+id/avatar"-->
             <!--android:layout_toRightOf="@+id/avatar"-->
 
-            <TextView
-                android:id="@+id/memberDescript"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/line"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/line"
-                android:layout_below="@+id/line"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:lines="3"
-                android:paddingBottom="4dp"
-                android:paddingRight="15dp"
-                android:text="The photo of Yasir Ameen. He is an Android Application Developer and he work hard for giving thier best to the audience. Join him on facebook"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#ffffff"
-                android:textSize="10sp" />
+            <!--<TextView-->
+                <!--android:id="@+id/memberDescript"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignLeft="@+id/line"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignStart="@+id/line"-->
+                <!--android:layout_below="@+id/line"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:ellipsize="end"-->
+                <!--android:lines="3"-->
+                <!--android:paddingBottom="4dp"-->
+                <!--android:paddingRight="15dp"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="10sp" />-->
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

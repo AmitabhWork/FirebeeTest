@@ -1,10 +1,10 @@
-package ahh.com.ahh;
+package ahh.com.app;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity
     };
 
 
-
     String summary = "<html><p>\n" +
             "We're excited to announce the full speaker list and agenda for the first ever\n" +
             "Firebase Dev Summit!\n" +
@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity
             "                    <li>Use two-dimensional NumPy arrays and pandas DataFrames</li>\n" +
             "                    <li>Understand how to group data and to combine data from multiple files</li>\n" +
             "                  </ul></html>";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView desctiption=(TextView) findViewById(R.id.description);
+        TextView desctiption = (TextView) findViewById(R.id.description);
         desctiption.setText(Html.fromHtml(summary));
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -147,6 +148,33 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.sp_member_data), getApplicationContext().MODE_PRIVATE);
+
+        String photoUrl = sharedPref.getString(getString(R.string.sp_member_imgurl), null);
+        String displayName = sharedPref.getString(getString(R.string.sp_member_name), null);
+        String emailId = sharedPref.getString(getString(R.string.sp_member_email), null);
+
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View hView = navigationView.getHeaderView(0);
+
+        Log.d("onResume ", sharedPref.toString() + " , \n" + photoUrl + " , \n" + displayName + " , \n" + emailId);
+        TextView nav_user = (TextView) hView.findViewById(R.id.memberName);
+        nav_user.setText(displayName);
+
+        TextView nav_eid = (TextView) hView.findViewById(R.id.memberEid);
+        nav_eid.setText(emailId);
+        ImageView nav_IV = (ImageView) hView.findViewById(R.id.memberImage);
+        Glide.with(this)
+                .load(photoUrl)
+                .into(nav_IV);
+
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -155,18 +183,20 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_core) {
             // Handle the camera action
-            Intent coreTeamIntent=new Intent(getApplicationContext(),Activity_CoreTeam.class);
+            Intent coreTeamIntent = new Intent(getApplicationContext(), Activity_CoreTeam.class);
             startActivity(coreTeamIntent);
         } else if (id == R.id.nav_gallery) {
 
-
+            startActivity(new Intent(getApplicationContext(), Activity_SubGallery.class));
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
-        }else if (id == R.id.login) {
-            startActivity(new Intent(getApplicationContext(),UserAuth.class));
+        } else if (id == R.id.login) {
+            startActivity(new Intent(getApplicationContext(), UserAuth.class));
 
+        } else if (id == R.id.admin) {
+            startActivity(new Intent(getApplicationContext(), Admin.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

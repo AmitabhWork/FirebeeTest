@@ -1,4 +1,4 @@
-package ahh.com.ahh;
+package ahh.com.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("ahh.com.ahh", appContext.getPackageName());
+        assertEquals("ahh.com.app", appContext.getPackageName());
     }
 }

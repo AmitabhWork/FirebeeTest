@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="ahh.com.ahh.UserAuth">
+    tools:context="ahh.com.app.UserAuth">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,51 +21,78 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_user_auth"
-        android:id="@+id/include" />
-
-    <TextView
-        android:text="TextView"
+    <!--<include layout="@layout/content_user_auth"-->
+    <!--android:id="@+id/include" />-->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center_vertical|center_horizontal"
-        android:layout_gravity="center_vertical|center_horizontal" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="IDP "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center_vertical|left"
-        android:layout_gravity="center_vertical|right" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:text="IDP "
 
-    <Button
-        android:text="Delete Account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/delete"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|right"
-        android:layout_gravity="center_vertical|left" />
+            app:layout_anchorGravity="center_vertical|left" />
 
-    <Button
-        android:text="Signout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sign_out"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center_horizontal"
-        android:layout_gravity="center_vertical|center_horizontal" />
+        <Button
+            android:id="@+id/sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Signout"
 
-    <!--<android.support.design.widget.FloatingActionButton-->
+            app:layout_anchorGravity="bottom|center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_marginRight="41dp"
+            android:layout_marginEnd="41dp" />
+
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="wrap_content"
+            android:layout_height="167dp"
+            app:srcCompat="@drawable/com_facebook_profile_picture_blank_square"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:text="Delete Account"
+
+            app:layout_anchorGravity="bottom|right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="TextView"
+
+            app:layout_anchorGravity="center_vertical|center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp" />
+
+        <!--<android.support.design.widget.FloatingActionButton-->
         <!--android:id="@+id/fab"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
         <!--android:layout_gravity="bottom|end"-->
         <!--android:layout_margin="@dimen/fab_margin"-->
         <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
-
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

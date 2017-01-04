@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "ahh.com.ahh"
+        applicationId "ahh.com.app"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
@@ -19,6 +19,7 @@ android {
     }
     repositories {
         mavenLocal()
+        mavenCentral()
         flatDir {
             dirs 'libs'
         }
@@ -47,4 +48,10 @@ dependencies {
     compile 'com.firebaseui:firebase-ui-storage:1.0.0'
     // Single target that includes all FirebaseUI libraries above
     compile 'com.firebaseui:firebase-ui:1.0.0'
+//    compile 'com.nbsp:library:1.1'
+    compile 'com.nononsenseapps:filepicker:3.1.0'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
 }

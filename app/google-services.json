@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "3843476943",
-    "firebase_url": "https://ahhdb-8420b.firebaseio.com",
-    "project_id": "ahhdb-8420b",
-    "storage_bucket": "ahhdb-8420b.appspot.com"
+    "project_number": "956649970578",
+    "firebase_url": "https://ahhbackend.firebaseio.com",
+    "project_id": "ahhbackend",
+    "storage_bucket": "ahhbackend.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:3843476943:android:062c51705c71fda4",
+        "mobilesdk_app_id": "1:956649970578:android:a1fb6ede58524140",
         "android_client_info": {
-          "package_name": "ahh.com.ahh"
+          "package_name": "ahh.com.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "3843476943-m1mnif2dda5d96cfp754h4657j6jqa8b.apps.googleusercontent.com",
+          "client_id": "956649970578-f8bo5joe710tdoc0uda8rumgd1slaoeq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "ahh.com.ahh",
+            "package_name": "ahh.com.app",
             "certificate_hash": "2F7FCD53CFA3EC7D6D877017CE16E8A767654B9E"
           }
         },
         {
-          "client_id": "3843476943-buaeqpnk6megndrd9nkln2lg82ntu1i6.apps.googleusercontent.com",
+          "client_id": "956649970578-oiemc5li7fqkpjspalnkhsr405h8hg14.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBa4n2g9pgWdeJG2wgWGud-BCTh_xQklbk"
+          "current_key": "AIzaSyCIXDpdJOhBfPDvSCUg1mYX54Kw1B_iAhs"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "3843476943-buaeqpnk6megndrd9nkln2lg82ntu1i6.apps.googleusercontent.com",
+              "client_id": "956649970578-oiemc5li7fqkpjspalnkhsr405h8hg14.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

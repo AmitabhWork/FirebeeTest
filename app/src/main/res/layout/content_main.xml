@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="ahh.com.ahh.MainActivity"
+        tools:context="ahh.com.app.MainActivity"
         tools:showIn="@layout/app_bar_main">
 
 

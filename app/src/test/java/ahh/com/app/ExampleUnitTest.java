@@ -1,4 +1,4 @@
-package ahh.com.ahh;
+package ahh.com.app;
 
 import org.junit.Test;
 

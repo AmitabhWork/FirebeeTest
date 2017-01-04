@@ -34,4 +34,12 @@
                 android:icon="@drawable/ic_vpn_key_black_24dp"/>
         </menu>
     </item>
+    <item android:title="Admin">
+        <menu>
+            <item
+                android:id="@+id/admin"
+                android:title="Administrator"
+                android:icon="@drawable/ic_assignment_ind_black_24dp"/>
+        </menu>
+    </item>
 </menu>
